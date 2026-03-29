@@ -75,5 +75,10 @@ unsigned int faStr3(const char *str) {
         total_len += len;
     }
 
-    return words ? static_cast<unsigned int>(static_cast<double>(total_len) / words + 0.5) : 0;
+    if (words == 0) {
+    return 0;
+    } else {
+    return static_cast<unsigned int>(static_cast<double>(total_len)/words+0.5);
+}
+
 }
